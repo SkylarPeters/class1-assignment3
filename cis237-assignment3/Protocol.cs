@@ -16,11 +16,13 @@ namespace cis237_assignment3
         // Variables
         //*****************************
         private int numberOfLanguages;
+        private decimal protocolCostCalc;
 
         //*****************************
         // Constants
         //*****************************
         private const decimal costPerLanguage = 100;
+        private const decimal protocolTypeCost = 150;
 
         //*****************************
         //Properties
@@ -33,7 +35,7 @@ namespace cis237_assignment3
 
         public override decimal TotalCost
         {
-            get { return base.totalCost; }
+            get { return protocolCostCalc; }
         }
 
         //******************************
@@ -41,12 +43,12 @@ namespace cis237_assignment3
         //******************************
         public override string ToString()
         {
-            return $"{base.ToString()} {NumberOfLanguages.ToString("C")}";
+            return $"{base.ToString()} {NumberOfLanguages.ToString()}";
         }
 
         public override void CalculateTotalCost()
         {
-            base.TotalCost += (numberOfLanguages * costPerLanguage);
+            protocolCostCalc = base.TotalCost + protocolTypeCost + (numberOfLanguages * costPerLanguage);
         }
 
         //*****************************
