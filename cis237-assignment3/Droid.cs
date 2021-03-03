@@ -51,20 +51,6 @@ namespace cis237_assignment3
 
         public virtual void CalculateTotalCost()
         {
-            // If statements used to add a cost to total based on color chosen
-            if (Color == "Brown")
-            {
-                totalCost += 25;
-            }
-            if (Color == "White")
-            {
-                totalCost += 50;
-            }
-            if (Color == "Black")
-            {
-                totalCost += 75;
-            }
-
             // If statements used to add a cost to total based on material chosen
             if (Material == "Iron")
             {
@@ -77,6 +63,20 @@ namespace cis237_assignment3
             if (Material == "Titanium")
             {
                 totalCost += 300;
+            }
+
+            // If statements used to add a cost to total based on color chosen
+            if (Color == "Brown")
+            {
+                totalCost += 25;
+            }
+            if (Color == "White")
+            {
+                totalCost += 50;
+            }
+            if (Color == "Black")
+            {
+                totalCost += 75;
             }
         }
 

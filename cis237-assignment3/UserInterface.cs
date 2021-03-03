@@ -24,7 +24,9 @@ namespace cis237_assignment3
             String input = Console.ReadLine();
 
             //While the input is not valid re-get the input
-            while (input != "1" && input != "2" && input != "3")
+            while (input != "1" && 
+                   input != "2" && 
+                   input != "3")
             {
                 //Print Error message
                 this.PrintErrorMessage();
@@ -39,6 +41,7 @@ namespace cis237_assignment3
             return Int32.Parse(input);
         }
 
+        // Print the menu to the user
         private void PrintMenu()
         {
             Console.WriteLine("What would you like to do?");
@@ -47,12 +50,538 @@ namespace cis237_assignment3
             Console.WriteLine("3. Exit");
         }
 
-        private void PrintErrorMessage()
+        // Print an error message to the user
+        public void PrintErrorMessage()
         {
             Console.WriteLine("That is not a valid entry");
             Console.WriteLine("Please make a valid choice");
             Console.WriteLine();
         }
 
+        // Method to print droid selection options to user
+        public void PrintDroidOptions()
+        {
+            Console.WriteLine("Enter the Corresponding Number to Choose Droid Type.");
+            Console.WriteLine("1: Protocol" + Environment.NewLine + 
+                              "2: Utility" + Environment.NewLine + 
+                              "3: Janitor" + Environment.NewLine + 
+                              "4: Astromech");
+        }
+
+        public string[] GetNewProtocolDroid()
+        {
+            // Variables used
+            string material;
+            string color;
+            string numberOfLanguages;
+
+            // Print question and get input
+            material = this.GetStringField("Material");
+            string input = material;
+
+            // While the input is not a valid material, re-get the input
+            while (input.ToLower() != "iron" &&
+                   input.ToLower() != "steel" &&
+                   input.ToLower() != "titanium")
+            {
+                // Print Error message
+                this.PrintErrorMessage();
+
+                // Re-print the question
+                material = this.GetStringField("Material");
+
+                // Get the input again
+                input = material;
+            }
+
+            // Print question and get input
+            color = this.GetStringField("Color");
+            input = color;
+
+            // While the input is not a valid color, re-get the input
+            while (input.ToLower() != "iron" &&
+                   input.ToLower() != "steel" &&
+                   input.ToLower() != "titanium")
+            {
+                // Print Error message
+                this.PrintErrorMessage();
+
+                // Re-print the question
+                color = this.GetStringField("Color");
+
+                // Get the input again.
+                input = color;
+            }
+            // Print question for the number of known languages
+            numberOfLanguages = this.GetIntField("Number of Languages");
+
+            return new string[] { material, color, numberOfLanguages };
+        }
+
+        public string[] GetNewUtilityDroid()
+        {
+            // Variables used
+            string material;
+            string color;
+            string toolbox;
+            string computerConnection;
+            string arm;
+
+            // Print question and get input
+            material = this.GetStringField("Material");
+            string input = material;
+
+            // While the input is not a valid material, re-get the input
+            while (input.ToLower() != "iron" &&
+                   input.ToLower() != "steel" &&
+                   input.ToLower() != "titanium")
+            {
+                // Print Error message
+                this.PrintErrorMessage();
+
+                // Re-print the question
+                GetStringField("Material");
+
+                // Get the input again.
+                input = material;
+            }
+
+            // Print question and get input
+            color = this.GetStringField("Color");
+            input = color;
+
+            // While the input is not a valid color, re-get the input
+            while (input.ToLower() != "iron" &&
+                   input.ToLower() != "steel" &&
+                   input.ToLower() != "titanium")
+            {
+                // Print Error message
+                this.PrintErrorMessage();
+
+                // Re-print the question
+                GetStringField("Color");
+
+                // Get the input from the console again.
+                input = color;
+            }
+
+            // Print question for adding a toolbox, computer connection, and an arm
+            toolbox = this.GetBoolField("Toolbox");
+            computerConnection = this.GetBoolField("Computer Connection");
+            arm = this.GetBoolField("Arm");
+
+            return new string[] { material, color, toolbox, computerConnection, arm };
+        }
+
+        public string[] GetNewJanitorDroid()
+        {
+            // Variables used
+            string material;
+            string color;
+            string toolbox;
+            string computerConnection;
+            string arm;
+            string trashCompactor;
+            string vacuum;
+
+            // Print question and get input
+            material = this.GetStringField("Material");
+            string input = material;
+
+            // While the input is not a valid material, re-get the input
+            while (input.ToLower() != "iron" &&
+                   input.ToLower() != "steel" &&
+                   input.ToLower() != "titanium")
+            {
+                // Print Error message
+                this.PrintErrorMessage();
+
+                // Re-print the question
+                GetStringField("Material");
+
+                // Get the input again.
+                input = material;
+            }
+
+            // Print question and get input
+            color = this.GetStringField("Color");
+            input = color;
+
+            // While the input is not a valid color, re-get the input
+            while (input.ToLower() != "iron" &&
+                   input.ToLower() != "steel" &&
+                   input.ToLower() != "titanium")
+            {
+                // Print Error message
+                this.PrintErrorMessage();
+
+                // Re-print the question
+                GetStringField("Color");
+
+                // Get the input from the console again.
+                input = color;
+            }
+
+            // Print question for adding a toolbox, computer connection, and an arm
+            toolbox = this.GetBoolField("Toolbox");
+            computerConnection = this.GetBoolField("Computer Connection");
+            arm = this.GetBoolField("Arm");
+            trashCompactor = this.GetBoolField("Trash Compactor");
+            vacuum = this.GetBoolField("Vacuum");
+
+            return new string[] { material, color, toolbox, computerConnection, arm, trashCompactor, vacuum };
+        }
+
+        public string[] GetNewAstromechDroid()
+        {
+            // Variables used
+            string material;
+            string color;
+            string toolbox;
+            string computerConnection;
+            string arm;
+            string fireExtinguisher;
+            string numberShips;
+
+            // Print question and get input
+            material = this.GetStringField("Material");
+            string input = material;
+
+            // While the input is not a valid material, re-get the input
+            while (input.ToLower() != "iron" &&
+                   input.ToLower() != "steel" &&
+                   input.ToLower() != "titanium")
+            {
+                // Print Error message
+                this.PrintErrorMessage();
+
+                // Re-print the question
+                GetStringField("Material");
+
+                // Get the input again.
+                input = material;
+            }
+
+            // Print question and get input
+            color = this.GetStringField("Color");
+            input = color;
+
+            // While the input is not a valid color, re-get the input
+            while (input.ToLower() != "iron" &&
+                   input.ToLower() != "steel" &&
+                   input.ToLower() != "titanium")
+            {
+                // Print Error message
+                this.PrintErrorMessage();
+
+                // Re-print the question
+                GetStringField("Color");
+
+                // Get the input from the console again.
+                input = color;
+            }
+
+            // Print question for adding a toolbox, computer connection, and an arm
+            toolbox = this.GetBoolField("Toolbox");
+            computerConnection = this.GetBoolField("Computer Connection");
+            arm = this.GetBoolField("Arm");
+            fireExtinguisher = this.GetBoolField("Fire Extinguisher");
+            numberShips = this.GetIntField("Number of Ships");
+
+            return new string[] { material, color, toolbox, computerConnection, arm, fireExtinguisher, numberShips };
+        }
+
+
+        //// Get new droid from the user
+        //public string[] GetNewDroidInformation()
+        //{
+        //    // Show user the droid options
+        //    PrintDroidOptions();
+
+        //    // Get input from user
+        //    string input = Console.ReadLine();
+
+        //    // While the input is not valid re-get the input
+        //    while (input != "1" && 
+        //           input != "2" && 
+        //           input != "3" && 
+        //           input != "4")
+        //    {
+        //        //Print Error message
+        //        this.PrintErrorMessage();
+
+        //        //Re-print the options
+        //        PrintDroidOptions();
+
+        //        //Get the input from the console again.
+        //        input = Console.ReadLine();
+        //    }
+
+        //    // Variables used in the switch statement
+        //    string material;
+        //    string color;
+
+        //    string numberOfLanguages;
+
+        //    string toolbox;
+        //    string computerConnection;
+        //    string arm;
+
+        //    string trashCompactor;
+        //    string vacuum;
+
+        //    string fireExtinguisher;
+        //    string numberShips;
+
+        //    // Switch statement for adding each option
+        //    switch (input)
+        //    {
+        //        case "1":
+        //            material = this.GetStringField("Material");
+
+        //            // While the input is not a valid material, re-get the input
+        //            while (input.ToLower() != "iron" &&
+        //                   input.ToLower() != "steel" &&
+        //                   input.ToLower() != "titanium")
+        //            {
+        //                //Print Error message
+        //                this.PrintErrorMessage();
+
+        //                //Re-print the question
+        //                GetStringField("Material");
+
+        //                //Get the input from the console again.
+        //                input = Console.ReadLine();
+        //            }
+
+        //            color = this.GetStringField("Color");
+
+        //            // While the input is not a valid color, re-get the input
+        //            while (input.ToLower() != "iron" &&
+        //                   input.ToLower() != "steel" &&
+        //                   input.ToLower() != "titanium")
+        //            {
+        //                //Print Error message
+        //                this.PrintErrorMessage();
+
+        //                //Re-print the question
+        //                GetStringField("Color");
+
+        //                //Get the input from the console again.
+        //                input = Console.ReadLine();
+        //            }
+
+        //            numberOfLanguages = this.GetIntField("Number of Languages");
+
+        //            return new string[] { material, color, numberOfLanguages };
+
+        //        case "2":
+        //            material = this.GetStringField("Material");
+
+        //            // While the input is not a valid material, re-get the input
+        //            while (input.ToLower() != "iron" &&
+        //                   input.ToLower() != "steel" &&
+        //                   input.ToLower() != "titanium")
+        //            {
+        //                //Print Error message
+        //                this.PrintErrorMessage();
+
+        //                //Re-print the question
+        //                GetStringField("Material");
+
+        //                //Get the input from the console again.
+        //                input = Console.ReadLine();
+        //            }
+
+        //            color = this.GetStringField("Color");
+
+        //            // While the input is not a valid color, re-get the input
+        //            while (input.ToLower() != "iron" &&
+        //                   input.ToLower() != "steel" &&
+        //                   input.ToLower() != "titanium")
+        //            {
+        //                //Print Error message
+        //                this.PrintErrorMessage();
+
+        //                //Re-print the question
+        //                GetStringField("Color");
+
+        //                //Get the input from the console again.
+        //                input = Console.ReadLine();
+        //            }
+
+        //            toolbox = this.GetBoolField("Toolbox");
+        //            computerConnection = this.GetBoolField("Computer Connection");
+        //            arm = this.GetBoolField("Arm");
+
+        //            return new string[] { material, color, toolbox, computerConnection, arm };
+
+        //        case "3":
+        //            material = this.GetStringField("Material");
+
+        //            // While the input is not a valid material, re-get the input
+        //            while (input.ToLower() != "iron" &&
+        //                   input.ToLower() != "steel" &&
+        //                   input.ToLower() != "titanium")
+        //            {
+        //                //Print Error message
+        //                this.PrintErrorMessage();
+
+        //                //Re-print the question
+        //                GetStringField("Material");
+
+        //                //Get the input from the console again.
+        //                input = Console.ReadLine();
+        //            }
+
+        //            color = this.GetStringField("Color");
+
+        //            // While the input is not a valid color, re-get the input
+        //            while (input.ToLower() != "iron" &&
+        //                   input.ToLower() != "steel" &&
+        //                   input.ToLower() != "titanium")
+        //            {
+        //                //Print Error message
+        //                this.PrintErrorMessage();
+
+        //                //Re-print the question
+        //                GetStringField("Color");
+
+        //                //Get the input from the console again.
+        //                input = Console.ReadLine();
+        //            }
+
+        //            toolbox = this.GetBoolField("Toolbox");
+        //            computerConnection = this.GetBoolField("Computer Connection");
+        //            arm = this.GetBoolField("Arm");
+        //            trashCompactor = this.GetBoolField("Trash Compactor");
+        //            vacuum = this.GetBoolField("Vacuum");
+
+
+        //            return new string[] { material, color, toolbox, computerConnection, arm, trashCompactor, vacuum };
+
+        //        case "4":
+        //            material = this.GetStringField("Material");
+
+        //            // While the input is not a valid material, re-get the input
+        //            while (input.ToLower() != "iron" &&
+        //                   input.ToLower() != "steel" &&
+        //                   input.ToLower() != "titanium")
+        //            {
+        //                //Print Error message
+        //                this.PrintErrorMessage();
+
+        //                //Re-print the question
+        //                GetStringField("Material");
+
+        //                //Get the input from the console again.
+        //                input = Console.ReadLine();
+        //            }
+
+        //            color = this.GetStringField("Color");
+
+        //            // While the input is not a valid color, re-get the input
+        //            while (input.ToLower() != "iron" &&
+        //                   input.ToLower() != "steel" &&
+        //                   input.ToLower() != "titanium")
+        //            {
+        //                //Print Error message
+        //                this.PrintErrorMessage();
+
+        //                //Re-print the question
+        //                GetStringField("Color");
+
+        //                //Get the input from the console again.
+        //                input = Console.ReadLine();
+        //            }
+
+        //            toolbox = this.GetBoolField("Toolbox");
+        //            computerConnection = this.GetBoolField("Computer Connection");
+        //            arm = this.GetBoolField("Arm");
+        //            fireExtinguisher = this.GetBoolField("Fire Extinguisher");
+        //            numberShips = this.GetIntField("Number of Ships");
+
+        //            return new string[] { material, color, toolbox, computerConnection, arm, fireExtinguisher, numberShips };
+        //    }
+        //    return new string[] { };
+        //}
+
+        // Get a valid string field from the user
+        private string GetStringField(string fieldName)
+        {
+            Console.WriteLine("What is the new Droid's {0}", fieldName);
+            string value = null;
+            bool valid = false;
+            while (!valid)
+            {
+                value = Console.ReadLine();
+                if (!String.IsNullOrWhiteSpace(value))
+                {
+                    valid = true;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("You must provide a value.");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.WriteLine();
+                    Console.WriteLine("What is the new Droid's {0}", fieldName);
+                    Console.Write("> ");
+                }
+            }
+            return value;
+        }
+
+        private string GetIntField(string fieldName)
+        {
+            Console.WriteLine("What is the new Droid's known {0}", fieldName);
+            int value = 0;
+            bool valid = false;
+            while (!valid)
+            {
+                try
+                {
+                    value = Int32.Parse(Console.ReadLine());
+                    valid = true;
+                }
+                catch (Exception)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("That is not a valid Integer. Please enter a valid Integer.");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.WriteLine();
+                    Console.WriteLine("What is the new Droid's known {0}", fieldName);
+                    Console.Write("> ");
+                }
+            }
+            return value.ToString();
+        }
+
+        private string GetBoolField(string fieldName)
+        {
+            Console.WriteLine("Should the Droid have a/an {0} (y/n)", fieldName);
+            string input = null;
+            bool value = false;
+            bool valid = false;
+            while (!valid)
+            {
+                input = Console.ReadLine();
+                if (input.ToLower() == "y" || input.ToLower() == "n")
+                {
+                    valid = true;
+                    value = (input.ToLower() == "y");
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("That is not a valid Entry.");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.WriteLine();
+                    Console.WriteLine("Should the Droid have a/an {0} (y/n)", fieldName);
+                    Console.Write("> ");
+                }
+            }
+            return value.ToString();
+        }
     }
 }
