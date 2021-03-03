@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Skylar Peters
+// CIS 237
+// 3/3/2021
+
+using System;
 
 namespace cis237_assignment3
 {
