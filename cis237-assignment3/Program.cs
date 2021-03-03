@@ -27,8 +27,9 @@ namespace cis237_assignment3
                 // Check if input is 1
                 if (choice == 1)
                 {
-
+                    dc.PrintArray();
                 }
+
                 // Check if input is 2
                 if (choice == 2)
                 {
@@ -96,6 +97,7 @@ namespace cis237_assignment3
                             break;
                     }
                 }
+                choice = ui.GetUserInput();
             }
         }
     }

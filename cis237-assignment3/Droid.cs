@@ -34,11 +34,7 @@ namespace cis237_assignment3
             set { color = value; }
         }
 
-        public virtual decimal TotalCost
-        {
-            get { return totalCost; }
-            set { totalCost = value; }
-        }
+        public virtual decimal TotalCost{ get; set; }
 
         //******************************
         // Public Methods

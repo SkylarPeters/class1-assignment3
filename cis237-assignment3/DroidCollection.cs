@@ -64,8 +64,24 @@ namespace cis237_assignment3
         {
             droids[droidLength] = new Astromech(material, color, toolbox, computerConnection, arm, fireExtinguisher, numberShips);
             droidLength++;
-
         }
 
+        public void PrintArray()
+        {
+            // String to be concated to
+            string outputString = "";
+
+            // Print out the droids in the array
+            foreach (IDroid droid in droids)
+            {
+                if (droid != null)
+                {
+                    // Concat to the outputString
+                    outputString += droid.ToString() + Environment.NewLine;
+                }
+            }
+            // Output the string
+            ui.Output(outputString);
+        }
     }
 }
