@@ -80,7 +80,7 @@ namespace cis237_assignment3
         //*****************************
         // Constructors
         //*****************************
-        public Protocol(string Material, string Color, bool Toolbox, bool ComputerConnection, bool Arm)
+        public Utility(string Material, string Color, bool Toolbox, bool ComputerConnection, bool Arm)
             : base(Material, Color)
         {
             this.toolbox = Toolbox;
