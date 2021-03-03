@@ -34,7 +34,7 @@ namespace cis237_assignment3
             set { color = value; }
         }
 
-        public abstract decimal TotalCost { get; set; }
+        public virtual decimal TotalCost { get; set; }
 
         //******************************
         // Public Methods
