@@ -44,7 +44,7 @@ namespace cis237_assignment3
         //******************************
         public override string ToString()
         {
-            return $"{base.ToString()} {TrashCompactor.ToString()} {Vacuum}";
+            return $"{base.ToString()} {TrashCompactor.ToString()} {Vacuum.ToString()}";
         }
 
         public override void CalculateTotalCost()
