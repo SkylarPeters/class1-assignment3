@@ -45,9 +45,12 @@ namespace cis237_assignment3
         //******************************
         public override string ToString()
         {
-            return $"{base.ToString()} {FireExtinguisher.ToString()} {NumberShips.ToString()}";
+            return $"{base.ToString()}" + Environment.NewLine + 
+                   $"Fire Extinguisher Equipped: {FireExtinguisher.ToString()}" + Environment.NewLine +
+                   $"Number of Ships Memorized: {NumberShips.ToString()}";
         }
 
+        // Method to override CalculateTotalCost
         public override void CalculateTotalCost()
         {
             if (FireExtinguisher == true)
@@ -65,6 +68,11 @@ namespace cis237_assignment3
         {
             this.fireExtinguisher = FireExtinguisher;
             this.numberShips = NumberShips;
+        }
+
+        public Astromech()
+        {
+
         }
     }
 }

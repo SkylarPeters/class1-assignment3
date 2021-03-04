@@ -35,7 +35,7 @@ namespace cis237_assignment3
 
         public override decimal TotalCost
         {
-            get { return protocolCostCalc; }
+            get { return totalCost; }
         }
 
         //******************************
@@ -43,13 +43,21 @@ namespace cis237_assignment3
         //******************************
         public override string ToString()
         {
-            return $"{base.ToString()} {NumberOfLanguages.ToString()}";
+            return $"{base.ToString()}Number of Languages: {NumberOfLanguages.ToString()}";
         }
 
+        // Method to override CalculateTotalCost
         public override void CalculateTotalCost()
         {
             protocolCostCalc = base.TotalCost + protocolTypeCost + (numberOfLanguages * costPerLanguage);
         }
+
+        // Maybe have all overridden CalculateTotalCost methods like this one below?
+        //public override void CalculateTotalCost()
+        //{
+        //    TotalCost = protocolTypeCost + (numberOfLanguages * costPerLanguage);
+        //}
+
 
         //*****************************
         // Constructors
@@ -57,6 +65,11 @@ namespace cis237_assignment3
         public Protocol(string Material, string Color, int NumberOfLanguages) : base(Material, Color)
         {
             this.numberOfLanguages = NumberOfLanguages;
+        }
+
+        public Protocol()
+        {
+
         }
     }
 }

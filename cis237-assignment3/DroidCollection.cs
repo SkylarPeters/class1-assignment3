@@ -15,6 +15,8 @@ namespace cis237_assignment3
         // New instance of the User Interface class
         UserInterface ui = new UserInterface();
 
+        Protocol pro = new Protocol();
+
         // Instantiation of the array
         IDroid[] droids = new IDroid[100];
         private int droidLength = 0;
@@ -22,15 +24,18 @@ namespace cis237_assignment3
         //*************************
         // Methods
         //*************************
-        // Add a new droid
+        // Method to add a new protocol droid
         public void AddNewProtocolDroid(string material, 
                                         string color, 
                                         int numberOfLanguages)
         {
+            // Possible location for CalculateTotalCost?
+            pro.CalculateTotalCost();
             droids[droidLength] = new Protocol(material, color, numberOfLanguages);
             droidLength++;
         }
 
+        // Method to add a new utility droid
         public void AddNewUtilityDroid(string material, 
                                        string color, 
                                        bool toolbox, 
@@ -41,6 +46,7 @@ namespace cis237_assignment3
             droidLength++;
         }
 
+        // Method to add a new janitor droid
         public void AddNewJanitorDroid(string material, 
                                        string color, 
                                        bool toolbox, 
@@ -54,6 +60,7 @@ namespace cis237_assignment3
 
         }
 
+        // Method to add a new astromech droid
         public void AddNewAstromechDroid(string material,
                                string color,
                                bool toolbox,
@@ -66,6 +73,7 @@ namespace cis237_assignment3
             droidLength++;
         }
 
+        // Method to print out the array to screen
         public void PrintArray()
         {
             // String to be concated to

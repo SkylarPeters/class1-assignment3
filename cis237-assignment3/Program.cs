@@ -18,6 +18,8 @@ namespace cis237_assignment3
             UserInterface ui = new UserInterface();
             DroidCollection dc = new DroidCollection();
 
+            Protocol pro = new Protocol();
+
             //Get some input from the user
             int choice = ui.GetUserInput();
 
@@ -60,6 +62,8 @@ namespace cis237_assignment3
                             dc.AddNewProtocolDroid(newPDroidInformation[0],
                                                    newPDroidInformation[1],
                                                    int.Parse(newPDroidInformation[2]));
+                            // Possible location for this?
+                            //pro.CalculateTotalCost();
                             break;
 
                         // Adds a utility droid
@@ -97,6 +101,7 @@ namespace cis237_assignment3
                             break;
                     }
                 }
+                // Prompt the user for input
                 choice = ui.GetUserInput();
             }
         }

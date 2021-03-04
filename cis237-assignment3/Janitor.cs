@@ -44,9 +44,12 @@ namespace cis237_assignment3
         //******************************
         public override string ToString()
         {
-            return $"{base.ToString()} {TrashCompactor.ToString()} {Vacuum.ToString()}";
+            return $"{base.ToString()}" + Environment.NewLine + 
+                   $"Trash Compactor Equipped: {TrashCompactor.ToString()}" + Environment.NewLine +
+                   $"Vacuum Equipped: {Vacuum.ToString()}";
         }
 
+        // Method to override CalculateTotalCost
         public override void CalculateTotalCost()
         {
             if (TrashCompactor == true)
@@ -70,5 +73,9 @@ namespace cis237_assignment3
             this.vacuum = Vacuum;
         }
 
+        public Janitor()
+        {
+
+        }
     }
 }

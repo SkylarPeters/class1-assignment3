@@ -57,9 +57,12 @@ namespace cis237_assignment3
         //******************************
         public override string ToString()
         {
-            return $"{base.ToString()} {Toolbox.ToString()} {ComputerConnection.ToString()} {Arm.ToString()}";
+            return $"{base.ToString()}Toolbox Equipped: {Toolbox.ToString()}" + Environment.NewLine +
+                   $"Computer Connection Equipped: {ComputerConnection.ToString()}" + Environment.NewLine +
+                   $"Extra Arm Equipped: {Arm.ToString()}";
         }
 
+        // Method to override CalculateTotalCost
         public override void CalculateTotalCost()
         {
             if (Toolbox == true)
@@ -88,5 +91,9 @@ namespace cis237_assignment3
             this.arm = Arm;
         }
 
+        public Utility()
+        {
+
+        }
     }
 }

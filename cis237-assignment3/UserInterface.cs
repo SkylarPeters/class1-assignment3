@@ -58,6 +58,7 @@ namespace cis237_assignment3
             Console.WriteLine();
         }
 
+        // Method that writes the output to the screen
         public void Output(string outputString)
         {
             Console.WriteLine(outputString);
@@ -73,6 +74,7 @@ namespace cis237_assignment3
                               "4: Astromech");
         }
 
+        // Method to gather info for a protocol droid
         public string[] GetNewProtocolDroid()
         {
             // Variables used
@@ -123,6 +125,7 @@ namespace cis237_assignment3
             return new string[] { material, color, numberOfLanguages };
         }
 
+        // Method to gather info for a utility droid
         public string[] GetNewUtilityDroid()
         {
             // Variables used
@@ -178,6 +181,7 @@ namespace cis237_assignment3
             return new string[] { material, color, toolbox, computerConnection, arm };
         }
 
+        // Method to gather info for a janitor droid
         public string[] GetNewJanitorDroid()
         {
             // Variables used
@@ -237,6 +241,7 @@ namespace cis237_assignment3
             return new string[] { material, color, toolbox, computerConnection, arm, trashCompactor, vacuum };
         }
 
+        // Method to gather info for an astromech droid
         public string[] GetNewAstromechDroid()
         {
             // Variables used
@@ -322,6 +327,7 @@ namespace cis237_assignment3
             return value;
         }
 
+        // Get a valid in field from the user
         private string GetIntField(string fieldName)
         {
             Console.WriteLine("What is the new Droid's known {0}", fieldName);
@@ -347,6 +353,7 @@ namespace cis237_assignment3
             return value.ToString();
         }
 
+        // Get a valid bool field from the user
         private string GetBoolField(string fieldName)
         {
             Console.WriteLine("Should the Droid have a/an {0} (y/n)", fieldName);

@@ -34,7 +34,11 @@ namespace cis237_assignment3
             set { color = value; }
         }
 
-        public virtual decimal TotalCost{ get; set; }
+        public virtual decimal TotalCost
+        {
+            get { return totalCost; }
+            set { totalCost = value; }
+        }
 
         //******************************
         // Public Methods
@@ -42,39 +46,13 @@ namespace cis237_assignment3
         // ToString method to return a formatted string containing the variables
         public override string ToString()
         {
-            return $"{material} {color} {totalCost}";
+            return Environment.NewLine + 
+                   $"Material Used: {material}" + Environment.NewLine +
+                   $"Color Chosen: {color}" + Environment.NewLine +
+                   $"Total Cost: {TotalCost} Credits" + Environment.NewLine;
         }
 
-        public virtual void CalculateTotalCost()
-        {
-            // If statements used to add a cost to total based on material chosen
-            if (Material == "Iron")
-            {
-                totalCost += 100;
-            }
-            if (Material == "Steel")
-            {
-                totalCost += 200;
-            }
-            if (Material == "Titanium")
-            {
-                totalCost += 300;
-            }
-
-            // If statements used to add a cost to total based on color chosen
-            if (Color == "Brown")
-            {
-                totalCost += 25;
-            }
-            if (Color == "White")
-            {
-                totalCost += 50;
-            }
-            if (Color == "Black")
-            {
-                totalCost += 75;
-            }
-        }
+        public abstract void CalculateTotalCost();
 
         //*****************************
         // Constructors
@@ -83,6 +61,11 @@ namespace cis237_assignment3
         {
             this.material = Material;
             this.color = Color;
+        }
+
+        public Droid()
+        {
+
         }
     }
 }
