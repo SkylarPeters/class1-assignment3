@@ -2,7 +2,7 @@
 
 ## Author
 
-
+Skylar Peters.
 
 ## Description
 
@@ -129,6 +129,10 @@ A good assignment will find the appropriate places to utilize all of the modifie
 
 ## Outside Resources Used
 
-
+Some bits of code used from the Assignment 1 Key.
 
 ## Known Problems, Issues, And/Or Errors in the Program
+
+I tried multiple ways to get the total cost to be changed and output, but wasn't able to get it working. 
+I can't tell if it's because I didn't put the method CalculateTotalCost in the right spot or if there is a problem with how my properties interact with eachother, or maybe even both.
+
